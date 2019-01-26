@@ -1,0 +1,16 @@
+//
+//  release.xcconfig
+//  GustieMenu
+//
+//  Created by Tucker Saude on 1/26/19.
+//  Copyright © 2019 Tucker Saude. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+#include "Pods/Target Support Files/Pods-GustieMenu/Pods-GustieMenu.release.xcconfig"
+
+ROOT_URL = <URL>
+FLURRY_API_KEY = <KEY>
+SCHEME = RELEASE

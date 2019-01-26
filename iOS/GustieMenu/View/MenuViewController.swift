@@ -11,9 +11,9 @@ import THCalendarDatePicker
 
 class MenuViewController: UIViewController {
     
-    var stations: [StationViewModel] = []
-    var menuItems: [[MenuItemViewModel]] = []
-    var date: Date = Date() {
+    private var stations: [StationViewModel] = []
+    private var menuItems: [[MenuItemViewModel]] = []
+    private var date: Date? {
         didSet {
             updateTableView()
         }
@@ -81,7 +81,11 @@ extension MenuViewController: UITableViewDataSource, UITableViewDelegate {
         Downloader.sharedInstance.downloadStations(date: date) { [weak self] stations, dateString in
             guard let self = self else { return }
             self.stations = stations.map { StationViewModel(from: $0) }
-            self.menuItems = stations.map { s in s.menuItems.map { MenuItemViewModel(from: $0) } }
+            self.menuItems = stations
+                .map { s in
+                    s.menuItems.sorted(by: { (a, b) -> Bool in a.featured && !b.featured })
+                        .map { MenuItemViewModel(from: $0) }
+                }
             self.dateLabel.text = dateString
             self.hideLoadingView()
             self.navigationItem.rightBarButtonItem?.isEnabled = true
@@ -97,7 +101,7 @@ extension MenuViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard stations.count > section else { return 0 }
         let station = stations[section]
-        return station.isShowingMenuItems ? 1 + menuItems[section].count : 1
+        return station.isShowingMenuItems ? 1 + menuItems[section].count : menuItems[section].filter { $0.featured }.count + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -107,7 +111,14 @@ extension MenuViewController: UITableViewDataSource, UITableViewDelegate {
             cell.station = station
             return cell
         } else {
-            let menuItem = menuItems[indexPath.section][indexPath.row - 1]
+            let station = stations[indexPath.section]
+            let menuItem: MenuItemViewModel
+            if station.isShowingMenuItems {
+                menuItem = menuItems[indexPath.section][indexPath.row - 1]
+            } else {
+                menuItem = menuItems[indexPath.section].filter { $0.featured }[indexPath.row - 1]
+            }
+
             let cell: MenuItemTableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "MenuItemTableViewCell", for: indexPath) as! MenuItemTableViewCell
             cell.menuItem = menuItem
             return cell
@@ -116,14 +127,19 @@ extension MenuViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath)
-        if let stationCell = cell as? StationTableViewCell,
-            let station = stationCell.station {
-            stationCell.station = station.toggleShowingMenuItems()
-            stations[indexPath.section] = stationCell.station!
-            let start = indexPath.row + 1
-            let indexPaths: [IndexPath] = Array(start..<start + menuItems[indexPath.section].count).map() { i in
+        if let stationCell = cell as? StationTableViewCell, let station = stationCell.station {
+
+            let newStation = station.toggleShowingMenuItems()
+            stationCell.station = newStation
+            stations[indexPath.section] = newStation
+
+            let featuredCount =  menuItems[indexPath.section].filter { $0.featured }.count
+
+            let start = indexPath.row + featuredCount + 1
+            let indexPaths: [IndexPath] = Array(start..<start + menuItems[indexPath.section].count - featuredCount).map() { i in
                 return IndexPath(row: i, section: indexPath.section)
             }
+
             if (stationCell.station!.isShowingMenuItems) {
                 self.tableView.insertRows(at: indexPaths, with: .automatic)
             } else {

@@ -11,7 +11,7 @@ import Alamofire
 
 class Downloader {
     static let sharedInstance = Downloader()
-    let apiURL = "https://rest-gustavus.herokuapp.com/api/"
+
     private init() { }
     
     lazy var dateFormatter: DateFormatter = {
@@ -22,8 +22,15 @@ class Downloader {
         return formatter
     }()
     
-    func downloadStations(date: Date, completion: @escaping ([Station], String) -> Void) {
-        Alamofire.request("\(apiURL)/menu/\(dateFormatter.string(from: date))", method: .get).responseData { response in
+    func downloadStations(date: Date?, completion: @escaping ([Station], String) -> Void) {
+        let dateString: String
+        if let date = date {
+            dateString = dateFormatter.string(from: date)
+        } else {
+            dateString = ""
+        }
+
+        Alamofire.request("\(Environment.rootURL)/menu/\(dateString)", method: .get).responseData { response in
             guard let data = response.data else {
                 print("Response failed: \(response.error.debugDescription)")
                 completion([], "Failure")

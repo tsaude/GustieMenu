@@ -1,24 +1,28 @@
 PODS:
   - Alamofire (4.8.1)
+  - Flurry-iOS-SDK/FlurrySDK (9.3.0)
   - KNSemiModalViewController_hons82 (0.4.6)
   - THCalendarDatePicker (1.3.0):
     - KNSemiModalViewController_hons82 (~> 0.4.6)
 
 DEPENDENCIES:
   - Alamofire (~> 4.8.1)
+  - Flurry-iOS-SDK/FlurrySDK (~> 9.3.0)
   - THCalendarDatePicker (~> 1.3.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - Flurry-iOS-SDK
     - KNSemiModalViewController_hons82
     - THCalendarDatePicker
 
 SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
+  Flurry-iOS-SDK: 43afe11656872692de232f580ef0a8a68b0b47c9
   KNSemiModalViewController_hons82: 0fd274ce19ef79407af5ad2d4fdf30c74c8c75c8
   THCalendarDatePicker: ef12c9d8477125a840463617eca83d0b7842ceb2
 
-PODFILE CHECKSUM: 79f657404274407b4802fc9dcc0ce67e60fd725c
+PODFILE CHECKSUM: 003f2373a3bb5c710c5e445ffc3297040a04adb0
 
 COCOAPODS: 1.5.3

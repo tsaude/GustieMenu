@@ -10,6 +10,7 @@
 		1E06FC1021FC1CDB00B5ECE0 /* MenuItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E06FC0F21FC1CDB00B5ECE0 /* MenuItemViewModel.swift */; };
 		1E06FC1421FC1D4B00B5ECE0 /* StationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E06FC1321FC1D4B00B5ECE0 /* StationViewModel.swift */; };
 		1E06FC1621FC296600B5ECE0 /* indicator@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E1EA5F91D837FA600D1B52F /* indicator@2x.png */; };
+		1E11027921FD13C4003C4298 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E11027821FD13C4003C4298 /* Environment.swift */; };
 		1E1EA5F01D837F9200D1B52F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1EA5E91D837F9200D1B52F /* AppDelegate.swift */; };
 		1E1EA5F11D837F9200D1B52F /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1EA5EA1D837F9200D1B52F /* Downloader.swift */; };
 		1E1EA5F21D837F9200D1B52F /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1EA5EB1D837F9200D1B52F /* MenuItem.swift */; };
@@ -27,8 +28,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1E06FC0F21FC1CDB00B5ECE0 /* MenuItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuItemViewModel.swift; path = MenuItemViewModel.swift; sourceTree = "<group>"; };
+		1E06FC0F21FC1CDB00B5ECE0 /* MenuItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemViewModel.swift; sourceTree = "<group>"; };
 		1E06FC1321FC1D4B00B5ECE0 /* StationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationViewModel.swift; sourceTree = "<group>"; };
+		1E11027721FD1283003C4298 /* debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = debug.xcconfig; sourceTree = "<group>"; };
+		1E11027821FD13C4003C4298 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		1E11027A21FD2378003C4298 /* release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = release.xcconfig; sourceTree = "<group>"; };
 		1E1EA5E91D837F9200D1B52F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1E1EA5EA1D837F9200D1B52F /* Downloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Downloader.swift; sourceTree = "<group>"; };
 		1E1EA5EB1D837F9200D1B52F /* MenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
@@ -95,12 +99,22 @@
 		1E06FC1521FC1DB100B5ECE0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				1EBFE9E521FC2AB40042CEA6 /* LaunchScreen.storyboard */,
 				1E235D521D820CBA00FE12B8 /* Info.plist */,
-				1EED83961D82F7EE003D242C /* Images */,
+				1EBFE9E521FC2AB40042CEA6 /* LaunchScreen.storyboard */,
+				1E11027621FD1266003C4298 /* Config */,
 				1E235D671D820CF000FE12B8 /* Fonts */,
+				1EED83961D82F7EE003D242C /* Images */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		1E11027621FD1266003C4298 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				1E11027721FD1283003C4298 /* debug.xcconfig */,
+				1E11027A21FD2378003C4298 /* release.xcconfig */,
+			);
+			path = Config;
 			sourceTree = "<group>";
 		};
 		1E235D3A1D820CBA00FE12B8 = {
@@ -126,6 +140,7 @@
 			children = (
 				1E1EA5E91D837F9200D1B52F /* AppDelegate.swift */,
 				1E1EA5EA1D837F9200D1B52F /* Downloader.swift */,
+				1E11027821FD13C4003C4298 /* Environment.swift */,
 				1E06FC1121FC1D1300B5ECE0 /* Data */,
 				1E06FC1521FC1DB100B5ECE0 /* Resources */,
 				1E06FC1221FC1D2B00B5ECE0 /* View */,
@@ -261,12 +276,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-GustieMenu/Pods-GustieMenu-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Flurry-iOS-SDK/Flurry_iOS_SDK.framework",
 				"${BUILT_PRODUCTS_DIR}/KNSemiModalViewController_hons82/KNSemiModalViewController_hons82.framework",
 				"${BUILT_PRODUCTS_DIR}/THCalendarDatePicker/THCalendarDatePicker.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Flurry_iOS_SDK.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KNSemiModalViewController_hons82.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/THCalendarDatePicker.framework",
 			);
@@ -291,6 +308,7 @@
 				1E1EA5F11D837F9200D1B52F /* Downloader.swift in Sources */,
 				1E1EA5F51D837F9200D1B52F /* Station.swift in Sources */,
 				1E1EA5F01D837F9200D1B52F /* AppDelegate.swift in Sources */,
+				1E11027921FD13C4003C4298 /* Environment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,7 +402,7 @@
 		};
 		1E235D611D820CBA00FE12B8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 66B2F4F5221EB8D09FDA1730 /* Pods-GustieMenu.debug.xcconfig */;
+			baseConfigurationReference = 1E11027721FD1283003C4298 /* debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -400,7 +418,7 @@
 		};
 		1E235D621D820CBA00FE12B8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A66A7D02EC2F90A3951A403F /* Pods-GustieMenu.release.xcconfig */;
+			baseConfigurationReference = 1E11027A21FD2378003C4298 /* release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

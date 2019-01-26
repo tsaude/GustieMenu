@@ -12,5 +12,5 @@ struct MenuItem: Codable {
     let name: String
     let price: String
     let type: String
-    let url: String
+    let featured: Bool
 }

@@ -7,14 +7,25 @@
 //
 
 import UIKit
+import Flurry_iOS_SDK
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    private func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+
+        if case .release = Environment.scheme {
+            let builder = FlurrySessionBuilder()
+                .withAppVersion("1.0")
+                .withLogLevel(FlurryLogLevelAll)
+                .withCrashReporting(true)
+                .withSessionContinueSeconds(10)
+
+            Flurry.startSession(Environment.flurryApiKey, with: builder)
+        }
+
         return true
     }
 }

@@ -12,12 +12,12 @@ struct MenuItemViewModel {
     let name: String
     let price: String
     let type: String
-    let url: String
+    let featured: Bool
 
     init(from item: MenuItem) {
         name = item.name
         price = item.price
         type = item.type
-        url = item.url
+        featured = item.featured
     }
 }
