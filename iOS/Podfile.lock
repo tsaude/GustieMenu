@@ -1,0 +1,24 @@
+PODS:
+  - Alamofire (4.8.1)
+  - KNSemiModalViewController_hons82 (0.4.6)
+  - THCalendarDatePicker (1.3.0):
+    - KNSemiModalViewController_hons82 (~> 0.4.6)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.8.1)
+  - THCalendarDatePicker (~> 1.3.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - KNSemiModalViewController_hons82
+    - THCalendarDatePicker
+
+SPEC CHECKSUMS:
+  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
+  KNSemiModalViewController_hons82: 0fd274ce19ef79407af5ad2d4fdf30c74c8c75c8
+  THCalendarDatePicker: ef12c9d8477125a840463617eca83d0b7842ceb2
+
+PODFILE CHECKSUM: 79f657404274407b4802fc9dcc0ce67e60fd725c
+
+COCOAPODS: 1.5.3

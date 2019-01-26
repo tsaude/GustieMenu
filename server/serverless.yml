@@ -1,0 +1,30 @@
+service: gustie-menu
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  stage: dev
+  region: us-east-1
+
+package:
+  include:
+    src/**/*
+
+functions:
+  menu:
+    handler: src/handler.menu
+    events:
+      - http:
+          path: menu/{date}
+          method: get
+          request: 
+            parameters:
+              paths:
+                date: true
+      - http:
+          path: menu
+          method: get
+
+plugins:
+  - serverless-plugin-typescript
+  - serverless-offline
