@@ -164,7 +164,7 @@ extension MenuViewController: THDatePickerDelegate {
     @IBAction func calendarPressed(sender: AnyObject) {
         let cal = THDatePickerViewController.datePicker()
         cal.delegate = self
-        cal.date = self.date
+        cal.date = self.date ?? Date()
         cal.selectedBackgroundColor = UIColor(hue: 0.13, saturation: 1.0, brightness: 0.15, alpha: 1.0)
         presentSemiViewController(cal, withOptions: [
             KNSemiModalOptionKeys.pushParentBack.takeUnretainedValue() as String : false,
