@@ -1,8 +1,12 @@
+plugins:
+  - serverless-plugin-typescript
+  - serverless-offline
+
 service: gustie-menu
 
 provider:
   name: aws
-  runtime: nodejs8.10
+  runtime: nodejs10.x
   stage: dev
   region: us-east-1
 
@@ -24,7 +28,3 @@ functions:
       - http:
           path: menu
           method: get
-
-plugins:
-  - serverless-plugin-typescript
-  - serverless-offline

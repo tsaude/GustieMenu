@@ -1,4 +1,4 @@
-import * as request from 'request-promise'
+import axios from 'axios'
 import * as cheerio from 'cheerio'
 
 const url = "https://gustavus.edu/diningservices/menu"
@@ -22,11 +22,11 @@ interface MenuItem {
 
 export class MenuRequest {
     date: string
+
     constructor(date: string) {
         if (date.match(/^\d\d-\d\d-\d\d\d\d$/)) {
             this.date = date
         } else {
-            console.log("Throwing error!")
             throw new Error("Date is in the wrong format.  Must be MM-dd-yyyy.")
         }
     }
@@ -40,7 +40,7 @@ export async function getMenu(req?: MenuRequest): Promise<GustavusMenu> {
         finalUrl = url
     }
 
-    let html = await request.get(finalUrl)
+    let html = (await axios.get(finalUrl)).data
 
     return parseHTML(html)
 }
@@ -64,10 +64,6 @@ function parseHTML(html: string): GustavusMenu {
 
         let name = station.find('caption').text()
         let menuItems = station.find('.menuItem').map(parseMenuItem).get() as MenuItem[]
-
-        if (name == "") {
-            console.log(`Parsing station - ${element.type}`)
-        }
 
         return { name, menuItems }
     }
