@@ -12,5 +12,5 @@
 #include "Pods/Target Support Files/Pods-GustieMenu/Pods-GustieMenu.release.xcconfig"
 
 ROOT_URL = <URL>
-FLURRY_API_KEY = <KEY>
+FIREBASE_CONFIG_NAME = <FILENAME>
 SCHEME = RELEASE

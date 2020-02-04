@@ -20,8 +20,8 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
-	<key>FLURRY_API_KEY</key>
-	<string>${FLURRY_API_KEY}</string>
+	<key>FIREBASE_CONFIG_NAME</key>
+	<string>${FIREBASE_CONFIG_NAME}</string>
 	<key>FirebaseScreenReportingEnabled</key>
 	<false/>
 	<key>LSRequiresIPhoneOS</key>
