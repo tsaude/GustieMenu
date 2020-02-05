@@ -53,7 +53,7 @@ fun toMenu(html: String): Menu {
         }
 
         Station(name, items)
-    }
+    }.sorted()
 
     return Menu(stations, date)
 }
