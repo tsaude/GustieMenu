@@ -26,9 +26,9 @@ enum Environment {
         return url
     }()
 
-    static let flurryApiKey: String = {
-        guard let apiKey = Environment.infoDictionary["FLURRY_API_KEY"] as? String else {
-            fatalError("API Key not set in plist for this environment")
+    static let firebaseConfigFilename: String = {
+        guard let apiKey = Environment.infoDictionary["FIREBASE_CONFIG_NAME"] as? String else {
+            fatalError("Firebase config not set in plist for this environment")
         }
         return apiKey
     }()

@@ -9,22 +9,6 @@
 import Foundation
 import Combine
 
-fileprivate let requestDateFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.timeZone = TimeZone.current
-    formatter.locale = Locale.current
-    formatter.dateFormat = "MM-dd-yyyy"
-    return formatter
-}()
-
-fileprivate let displayDateFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.timeZone = TimeZone.current
-    formatter.locale = Locale.current
-    formatter.dateFormat = "EEEE, MMM d, yyyy"
-    return formatter
-}()
-
 class MenuViewModel: ObservableObject {
     @Published var menu: Menu = .empty
     @Published var showingCalendar: Bool = false
@@ -37,9 +21,20 @@ class MenuViewModel: ObservableObject {
     }
 
     private var currentTask: URLSessionDataTask?
+    private var config: RemoteConfig
+    private var bag = Set<AnyCancellable>()
 
-    init() {
-        fetch()
+    init(_ config: RemoteConfig) {
+        self.isLoading = true
+        self.config = config
+        config.objectWillChange
+            .receive(on: DispatchQueue.main)
+            .sink { [unowned self] in
+                self.fetch()
+                #if DEBUG
+                print("Config updated! \(config.config)")
+                #endif
+            }.store(in: &bag)
     }
 
     func fetch() {
@@ -47,31 +42,40 @@ class MenuViewModel: ObservableObject {
 
         currentTask?.cancel()
         self.isLoading = true
-        currentTask = URLSession.shared.dataTask(with: Environment.rootURL.appendingPathComponent("/menu/\(dateString)")) { [weak self] data, response, error in
-            self?.currentTask = nil
 
+        currentTask = URLSession.shared.dataTask(with: config.rootUrl.appendingPathComponent("/menu/\(dateString)")) { [unowned self] data, response, error in
+            self.currentTask = nil
             DispatchQueue.main.async {
-                guard let data = data else {
-                    self?.menu = .empty
-                    self?.isError = true
-                    return
-                }
-
                 let decoder = JSONDecoder()
 
-                do {
-                    let menu = try decoder.decode(Menu.self, from: data)
-                    self?.menu = menu
-                    self?.isError = false
-                } catch {
-                    self?.menu = .empty
-                    self?.isError = true
+                if let data = data,
+                    let menu = try? decoder.decode(Menu.self, from: data) {
+                    self.menu = menu
+                    self.isError = false
+                } else {
+                    self.menu = .empty
+                    self.isError = true
                 }
 
-                self?.isLoading = false
+                Analytics.shared.logEvent(.menuSelected(id: dateString, success: !self.isError))
+
+                self.isLoading = false
             }
         }
 
         currentTask?.resume()
     }
 }
+
+fileprivate let requestDateFormatter: DateFormatter = {
+    let formatter = DateFormatter()
+    formatter.locale = Locale(identifier: "en_US_POSIX")
+    formatter.dateFormat = "MM-dd-yyyy"
+    return formatter
+}()
+
+fileprivate let displayDateFormatter: DateFormatter = {
+    let formatter = DateFormatter()
+    formatter.dateStyle = .full
+    return formatter
+}()

@@ -8,10 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		1E11027921FD13C4003C4298 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E11027821FD13C4003C4298 /* Environment.swift */; };
+		1E1D670423EA433F000C407C /* RemoteConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1D670323EA433F000C407C /* RemoteConfig.swift */; };
 		1E1EA5F01D837F9200D1B52F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1EA5E91D837F9200D1B52F /* AppDelegate.swift */; };
 		1E1EA5F21D837F9200D1B52F /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1EA5EB1D837F9200D1B52F /* MenuItem.swift */; };
 		1E1EA5F51D837F9200D1B52F /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1EA5EE1D837F9200D1B52F /* Station.swift */; };
 		1E235D4E1D820CBA00FE12B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E235D4D1D820CBA00FE12B8 /* Assets.xcassets */; };
+		1E5A8C5A23EA53C8009E0AD1 /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5A8C5923EA53C8009E0AD1 /* Analytics.swift */; };
 		1EBFE9E621FC2AB40042CEA6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EBFE9E521FC2AB40042CEA6 /* LaunchScreen.storyboard */; };
 		1EFB452B23E6229900C07FE3 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFB452A23E6229900C07FE3 /* Menu.swift */; };
 		1EFB452D23E68B1B00C07FE3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFB452C23E68B1B00C07FE3 /* SceneDelegate.swift */; };
@@ -25,12 +27,14 @@
 		1E11027721FD1283003C4298 /* debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = debug.xcconfig; sourceTree = "<group>"; };
 		1E11027821FD13C4003C4298 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		1E11027A21FD2378003C4298 /* release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = release.xcconfig; sourceTree = "<group>"; };
+		1E1D670323EA433F000C407C /* RemoteConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfig.swift; sourceTree = "<group>"; };
 		1E1EA5E91D837F9200D1B52F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1E1EA5EB1D837F9200D1B52F /* MenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		1E1EA5EE1D837F9200D1B52F /* Station.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
 		1E235D431D820CBA00FE12B8 /* GustieMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GustieMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E235D4D1D820CBA00FE12B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1E235D521D820CBA00FE12B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E5A8C5923EA53C8009E0AD1 /* Analytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
 		1EBFE9E521FC2AB40042CEA6 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1EFB452A23E6229900C07FE3 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		1EFB452C23E68B1B00C07FE3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +98,15 @@
 			path = Config;
 			sourceTree = "<group>";
 		};
+		1E1D670523EA434C000C407C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1E1D670323EA433F000C407C /* RemoteConfig.swift */,
+				1E5A8C5923EA53C8009E0AD1 /* Analytics.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		1E235D3A1D820CBA00FE12B8 = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +128,7 @@
 		1E235D451D820CBA00FE12B8 /* GustieMenu */ = {
 			isa = PBXGroup;
 			children = (
+				1E1D670523EA434C000C407C /* Services */,
 				1E1EA5E91D837F9200D1B52F /* AppDelegate.swift */,
 				1E11027821FD13C4003C4298 /* Environment.swift */,
 				1EFB452C23E68B1B00C07FE3 /* SceneDelegate.swift */,
@@ -270,8 +284,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E1EA5F21D837F9200D1B52F /* MenuItem.swift in Sources */,
+				1E1D670423EA433F000C407C /* RemoteConfig.swift in Sources */,
 				1EFB453323E7149E00C07FE3 /* GustieMenuView.swift in Sources */,
 				1EFB452F23E7107900C07FE3 /* MenuViewModel.swift in Sources */,
+				1E5A8C5A23EA53C8009E0AD1 /* Analytics.swift in Sources */,
 				1EFB452B23E6229900C07FE3 /* Menu.swift in Sources */,
 				1EFB453123E7123600C07FE3 /* MenuView.swift in Sources */,
 				1EFB452D23E68B1B00C07FE3 /* SceneDelegate.swift in Sources */,
@@ -400,12 +416,14 @@
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = WXBH4AY56B;
 				ENABLE_PREVIEWS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/GustieMenu/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.TuckerSaude.GustieMenu.debug;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"SWIFT_ACTIVE_COMPILATION_CONDITIONS[arch=*]" = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
@@ -419,6 +437,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = WXBH4AY56B;
 				ENABLE_PREVIEWS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/GustieMenu/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

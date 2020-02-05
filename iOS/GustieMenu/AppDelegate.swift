@@ -8,12 +8,18 @@
 
 import UIKit
 
+import Firebase
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+        let firebaseConfig = Bundle.main.path(forResource: Environment.firebaseConfigFilename, ofType: "plist")
+        guard let opts = FirebaseOptions(contentsOfFile: firebaseConfig!) else { fatalError("Couldn't load Firebase config file") }
+        FirebaseApp.configure(options: opts)
+
         return true
     }
 

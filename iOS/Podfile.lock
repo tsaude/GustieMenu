@@ -90,6 +90,7 @@ PODS:
 
 DEPENDENCIES:
   - Firebase/Analytics
+  - Firebase/Core
   - Firebase/RemoteConfig
 
 SPEC REPOS:
@@ -131,6 +132,6 @@ SPEC CHECKSUMS:
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
   Protobuf: dd1aaea7140debfe4dd0683fb8ef208e527ae153
 
-PODFILE CHECKSUM: ed3e249eb9b5dd211bd093654cf11aaa87e8b18a
+PODFILE CHECKSUM: 66e80c983fdfffe32f8db59edc31ad0c63914daa
 
 COCOAPODS: 1.8.4

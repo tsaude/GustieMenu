@@ -17,7 +17,7 @@ struct MenuView: View {
     var body: some View {
         ScrollView {
             VStack(spacing: 0) {
-                ForEach(menu.stations.sorted()) { station in
+                ForEach(menu.stations) { station in
                     StationView(station: station)
                 }
 
@@ -48,6 +48,7 @@ struct StationView: View {
             .padding()
             .background(Color("Primary").frame(maxWidth: .infinity))
             .onTapGesture {
+                Analytics.shared.logEvent(.stationSelected(station: self.station, expand: !self.isExpanded))
                 withAnimation {
                     self.isExpanded.toggle()
                 }
