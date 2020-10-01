@@ -7,7 +7,8 @@
 //
 
 import UIKit
-import Flurry_iOS_SDK
+
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,18 +16,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-
-        if case .release = Environment.scheme {
-            let builder = FlurrySessionBuilder()
-                .withAppVersion("1.0")
-                .withLogLevel(FlurryLogLevelAll)
-                .withCrashReporting(true)
-                .withSessionContinueSeconds(10)
-
-            Flurry.startSession(Environment.flurryApiKey, with: builder)
-        }
+        let firebaseConfig = Bundle.main.path(forResource: Environment.firebaseConfigFilename, ofType: "plist")
+        guard let opts = FirebaseOptions(contentsOfFile: firebaseConfig!) else { fatalError("Couldn't load Firebase config file") }
+        FirebaseApp.configure(options: opts)
 
         return true
     }
+
+    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
+        return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
+    }
+
 }
 

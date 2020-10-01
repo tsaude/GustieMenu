@@ -7,51 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1E06FC1021FC1CDB00B5ECE0 /* MenuItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E06FC0F21FC1CDB00B5ECE0 /* MenuItemViewModel.swift */; };
-		1E06FC1421FC1D4B00B5ECE0 /* StationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E06FC1321FC1D4B00B5ECE0 /* StationViewModel.swift */; };
-		1E06FC1621FC296600B5ECE0 /* indicator@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E1EA5F91D837FA600D1B52F /* indicator@2x.png */; };
 		1E11027921FD13C4003C4298 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E11027821FD13C4003C4298 /* Environment.swift */; };
+		1E1D670423EA433F000C407C /* RemoteConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1D670323EA433F000C407C /* RemoteConfig.swift */; };
 		1E1EA5F01D837F9200D1B52F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1EA5E91D837F9200D1B52F /* AppDelegate.swift */; };
-		1E1EA5F11D837F9200D1B52F /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1EA5EA1D837F9200D1B52F /* Downloader.swift */; };
 		1E1EA5F21D837F9200D1B52F /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1EA5EB1D837F9200D1B52F /* MenuItem.swift */; };
-		1E1EA5F31D837F9200D1B52F /* MenuItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1EA5EC1D837F9200D1B52F /* MenuItemTableViewCell.swift */; };
-		1E1EA5F41D837F9200D1B52F /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1EA5ED1D837F9200D1B52F /* MenuViewController.swift */; };
 		1E1EA5F51D837F9200D1B52F /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1EA5EE1D837F9200D1B52F /* Station.swift */; };
-		1E1EA5F61D837F9200D1B52F /* StationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1EA5EF1D837F9200D1B52F /* StationTableViewCell.swift */; };
-		1E1EA5FA1D837FA600D1B52F /* calendar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E1EA5F71D837FA600D1B52F /* calendar@2x.png */; };
-		1E1EA5FB1D837FA600D1B52F /* indicator_up@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E1EA5F81D837FA600D1B52F /* indicator_up@2x.png */; };
 		1E235D4E1D820CBA00FE12B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E235D4D1D820CBA00FE12B8 /* Assets.xcassets */; };
+		1E5A8C5A23EA53C8009E0AD1 /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5A8C5923EA53C8009E0AD1 /* Analytics.swift */; };
 		1EBFE9E621FC2AB40042CEA6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EBFE9E521FC2AB40042CEA6 /* LaunchScreen.storyboard */; };
-		1EED83951D82F639003D242C /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EED83941D82F639003D242C /* Storyboard.storyboard */; };
-		1EED83A11D82FD10003D242C /* Comfortaa_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1E235D661D820CE900FE12B8 /* Comfortaa_Regular.ttf */; };
-		DEE2F986163AFF4123C5EC56 /* Pods_GustieMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABF3E4AD40156B5577ACE620 /* Pods_GustieMenu.framework */; };
+		1EFB452B23E6229900C07FE3 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFB452A23E6229900C07FE3 /* Menu.swift */; };
+		1EFB452D23E68B1B00C07FE3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFB452C23E68B1B00C07FE3 /* SceneDelegate.swift */; };
+		1EFB452F23E7107900C07FE3 /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFB452E23E7107900C07FE3 /* MenuViewModel.swift */; };
+		1EFB453123E7123600C07FE3 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFB453023E7123600C07FE3 /* MenuView.swift */; };
+		1EFB453323E7149E00C07FE3 /* GustieMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFB453223E7149E00C07FE3 /* GustieMenuView.swift */; };
+		B4C71660CCAB4003B2344DBC /* Pods_GustieMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B53210CC50A948978FC1E063 /* Pods_GustieMenu.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1E06FC0F21FC1CDB00B5ECE0 /* MenuItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemViewModel.swift; sourceTree = "<group>"; };
-		1E06FC1321FC1D4B00B5ECE0 /* StationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationViewModel.swift; sourceTree = "<group>"; };
 		1E11027721FD1283003C4298 /* debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = debug.xcconfig; sourceTree = "<group>"; };
 		1E11027821FD13C4003C4298 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		1E11027A21FD2378003C4298 /* release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = release.xcconfig; sourceTree = "<group>"; };
+		1E1D670323EA433F000C407C /* RemoteConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfig.swift; sourceTree = "<group>"; };
 		1E1EA5E91D837F9200D1B52F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1E1EA5EA1D837F9200D1B52F /* Downloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Downloader.swift; sourceTree = "<group>"; };
 		1E1EA5EB1D837F9200D1B52F /* MenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
-		1E1EA5EC1D837F9200D1B52F /* MenuItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItemTableViewCell.swift; sourceTree = "<group>"; };
-		1E1EA5ED1D837F9200D1B52F /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		1E1EA5EE1D837F9200D1B52F /* Station.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
-		1E1EA5EF1D837F9200D1B52F /* StationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationTableViewCell.swift; sourceTree = "<group>"; };
-		1E1EA5F71D837FA600D1B52F /* calendar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "calendar@2x.png"; sourceTree = "<group>"; };
-		1E1EA5F81D837FA600D1B52F /* indicator_up@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "indicator_up@2x.png"; sourceTree = "<group>"; };
-		1E1EA5F91D837FA600D1B52F /* indicator@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "indicator@2x.png"; sourceTree = "<group>"; };
 		1E235D431D820CBA00FE12B8 /* GustieMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GustieMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E235D4D1D820CBA00FE12B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1E235D521D820CBA00FE12B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1E235D661D820CE900FE12B8 /* Comfortaa_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Comfortaa_Regular.ttf; sourceTree = "<group>"; };
+		1E5A8C5923EA53C8009E0AD1 /* Analytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
 		1EBFE9E521FC2AB40042CEA6 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		1EED83941D82F639003D242C /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
-		66B2F4F5221EB8D09FDA1730 /* Pods-GustieMenu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GustieMenu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GustieMenu/Pods-GustieMenu.debug.xcconfig"; sourceTree = "<group>"; };
-		A66A7D02EC2F90A3951A403F /* Pods-GustieMenu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GustieMenu.release.xcconfig"; path = "Pods/Target Support Files/Pods-GustieMenu/Pods-GustieMenu.release.xcconfig"; sourceTree = "<group>"; };
-		ABF3E4AD40156B5577ACE620 /* Pods_GustieMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GustieMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EFB452A23E6229900C07FE3 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		1EFB452C23E68B1B00C07FE3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		1EFB452E23E7107900C07FE3 /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
+		1EFB453023E7123600C07FE3 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		1EFB453223E7149E00C07FE3 /* GustieMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GustieMenuView.swift; sourceTree = "<group>"; };
+		2979EEA2E92CDE17AA0BEEE5 /* Pods-GustieMenu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GustieMenu.debug.xcconfig"; path = "Target Support Files/Pods-GustieMenu/Pods-GustieMenu.debug.xcconfig"; sourceTree = "<group>"; };
+		B53210CC50A948978FC1E063 /* Pods_GustieMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GustieMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F05813C2195242F8A6B9CA24 /* Pods-GustieMenu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GustieMenu.release.xcconfig"; path = "Target Support Files/Pods-GustieMenu/Pods-GustieMenu.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,39 +51,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DEE2F986163AFF4123C5EC56 /* Pods_GustieMenu.framework in Frameworks */,
+				B4C71660CCAB4003B2344DBC /* Pods_GustieMenu.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		08D12525BF0780FA1FA705B8 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				ABF3E4AD40156B5577ACE620 /* Pods_GustieMenu.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		1E06FC1121FC1D1300B5ECE0 /* Data */ = {
+		1E06FC1121FC1D1300B5ECE0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				1E1EA5EB1D837F9200D1B52F /* MenuItem.swift */,
 				1E1EA5EE1D837F9200D1B52F /* Station.swift */,
+				1EFB452A23E6229900C07FE3 /* Menu.swift */,
 			);
-			path = Data;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		1E06FC1221FC1D2B00B5ECE0 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				1EED83941D82F639003D242C /* Storyboard.storyboard */,
-				1E1EA5EC1D837F9200D1B52F /* MenuItemTableViewCell.swift */,
-				1E06FC0F21FC1CDB00B5ECE0 /* MenuItemViewModel.swift */,
-				1E1EA5ED1D837F9200D1B52F /* MenuViewController.swift */,
-				1E1EA5EF1D837F9200D1B52F /* StationTableViewCell.swift */,
-				1E06FC1321FC1D4B00B5ECE0 /* StationViewModel.swift */,
+				1EFB453223E7149E00C07FE3 /* GustieMenuView.swift */,
+				1EFB453023E7123600C07FE3 /* MenuView.swift */,
+				1EFB452E23E7107900C07FE3 /* MenuViewModel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -99,11 +81,10 @@
 		1E06FC1521FC1DB100B5ECE0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1E235D4D1D820CBA00FE12B8 /* Assets.xcassets */,
 				1E235D521D820CBA00FE12B8 /* Info.plist */,
 				1EBFE9E521FC2AB40042CEA6 /* LaunchScreen.storyboard */,
 				1E11027621FD1266003C4298 /* Config */,
-				1E235D671D820CF000FE12B8 /* Fonts */,
-				1EED83961D82F7EE003D242C /* Images */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -117,13 +98,22 @@
 			path = Config;
 			sourceTree = "<group>";
 		};
+		1E1D670523EA434C000C407C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1E1D670323EA433F000C407C /* RemoteConfig.swift */,
+				1E5A8C5923EA53C8009E0AD1 /* Analytics.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		1E235D3A1D820CBA00FE12B8 = {
 			isa = PBXGroup;
 			children = (
 				1E235D451D820CBA00FE12B8 /* GustieMenu */,
 				1E235D441D820CBA00FE12B8 /* Products */,
-				B4F229DBACE6798D1BD44C7D /* Pods */,
-				08D12525BF0780FA1FA705B8 /* Frameworks */,
+				5234738216FC9253AAB8ADD4 /* Pods */,
+				B8D4371272E7C8D88D54997B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -138,42 +128,32 @@
 		1E235D451D820CBA00FE12B8 /* GustieMenu */ = {
 			isa = PBXGroup;
 			children = (
+				1E1D670523EA434C000C407C /* Services */,
 				1E1EA5E91D837F9200D1B52F /* AppDelegate.swift */,
-				1E1EA5EA1D837F9200D1B52F /* Downloader.swift */,
 				1E11027821FD13C4003C4298 /* Environment.swift */,
-				1E06FC1121FC1D1300B5ECE0 /* Data */,
+				1EFB452C23E68B1B00C07FE3 /* SceneDelegate.swift */,
+				1E06FC1121FC1D1300B5ECE0 /* Model */,
 				1E06FC1521FC1DB100B5ECE0 /* Resources */,
 				1E06FC1221FC1D2B00B5ECE0 /* View */,
 			);
 			path = GustieMenu;
 			sourceTree = "<group>";
 		};
-		1E235D671D820CF000FE12B8 /* Fonts */ = {
+		5234738216FC9253AAB8ADD4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				1E235D661D820CE900FE12B8 /* Comfortaa_Regular.ttf */,
+				2979EEA2E92CDE17AA0BEEE5 /* Pods-GustieMenu.debug.xcconfig */,
+				F05813C2195242F8A6B9CA24 /* Pods-GustieMenu.release.xcconfig */,
 			);
-			path = Fonts;
+			path = Pods;
 			sourceTree = "<group>";
 		};
-		1EED83961D82F7EE003D242C /* Images */ = {
+		B8D4371272E7C8D88D54997B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1E1EA5F71D837FA600D1B52F /* calendar@2x.png */,
-				1E1EA5F81D837FA600D1B52F /* indicator_up@2x.png */,
-				1E1EA5F91D837FA600D1B52F /* indicator@2x.png */,
-				1E235D4D1D820CBA00FE12B8 /* Assets.xcassets */,
+				B53210CC50A948978FC1E063 /* Pods_GustieMenu.framework */,
 			);
-			path = Images;
-			sourceTree = "<group>";
-		};
-		B4F229DBACE6798D1BD44C7D /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				66B2F4F5221EB8D09FDA1730 /* Pods-GustieMenu.debug.xcconfig */,
-				A66A7D02EC2F90A3951A403F /* Pods-GustieMenu.release.xcconfig */,
-			);
-			name = Pods;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,17 +163,19 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1E235D601D820CBA00FE12B8 /* Build configuration list for PBXNativeTarget "GustieMenu" */;
 			buildPhases = (
-				CAD7C628E1CF4493A0CFC62E /* [CP] Check Pods Manifest.lock */,
+				B5317580F4243D2E432F16AE /* [CP] Check Pods Manifest.lock */,
 				1E235D3F1D820CBA00FE12B8 /* Sources */,
 				1E235D401D820CBA00FE12B8 /* Frameworks */,
 				1E235D411D820CBA00FE12B8 /* Resources */,
-				EE0497BB2EB3C8CF8A07AA5B /* [CP] Embed Pods Frameworks */,
+				6F40178296FAD26D2D2E0D24 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = GustieMenu;
+			packageProductDependencies = (
+			);
 			productName = GustieMenu;
 			productReference = 1E235D431D820CBA00FE12B8 /* GustieMenu.app */;
 			productType = "com.apple.product-type.application";
@@ -205,24 +187,27 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 1010;
+				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Tucker Saude";
 				TargetAttributes = {
 					1E235D421D820CBA00FE12B8 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = WXBH4AY56B;
+						LastSwiftMigration = 1130;
 					};
 				};
 			};
 			buildConfigurationList = 1E235D3E1D820CBA00FE12B8 /* Build configuration list for PBXProject "GustieMenu" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
 			mainGroup = 1E235D3A1D820CBA00FE12B8;
+			packageReferences = (
+			);
 			productRefGroup = 1E235D441D820CBA00FE12B8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -237,59 +222,58 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1EED83A11D82FD10003D242C /* Comfortaa_Regular.ttf in Resources */,
-				1E06FC1621FC296600B5ECE0 /* indicator@2x.png in Resources */,
-				1E1EA5FB1D837FA600D1B52F /* indicator_up@2x.png in Resources */,
-				1EED83951D82F639003D242C /* Storyboard.storyboard in Resources */,
 				1EBFE9E621FC2AB40042CEA6 /* LaunchScreen.storyboard in Resources */,
 				1E235D4E1D820CBA00FE12B8 /* Assets.xcassets in Resources */,
-				1E1EA5FA1D837FA600D1B52F /* calendar@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		CAD7C628E1CF4493A0CFC62E /* [CP] Check Pods Manifest.lock */ = {
+		6F40178296FAD26D2D2E0D24 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GustieMenu/Pods-GustieMenu-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GustieMenu/Pods-GustieMenu-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B5317580F4243D2E432F16AE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-GustieMenu-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EE0497BB2EB3C8CF8A07AA5B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-GustieMenu/Pods-GustieMenu-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Flurry-iOS-SDK/Flurry_iOS_SDK.framework",
-				"${BUILT_PRODUCTS_DIR}/KNSemiModalViewController_hons82/KNSemiModalViewController_hons82.framework",
-				"${BUILT_PRODUCTS_DIR}/THCalendarDatePicker/THCalendarDatePicker.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Flurry_iOS_SDK.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KNSemiModalViewController_hons82.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/THCalendarDatePicker.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GustieMenu/Pods-GustieMenu-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -299,13 +283,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E06FC1421FC1D4B00B5ECE0 /* StationViewModel.swift in Sources */,
 				1E1EA5F21D837F9200D1B52F /* MenuItem.swift in Sources */,
-				1E1EA5F41D837F9200D1B52F /* MenuViewController.swift in Sources */,
-				1E06FC1021FC1CDB00B5ECE0 /* MenuItemViewModel.swift in Sources */,
-				1E1EA5F31D837F9200D1B52F /* MenuItemTableViewCell.swift in Sources */,
-				1E1EA5F61D837F9200D1B52F /* StationTableViewCell.swift in Sources */,
-				1E1EA5F11D837F9200D1B52F /* Downloader.swift in Sources */,
+				1E1D670423EA433F000C407C /* RemoteConfig.swift in Sources */,
+				1EFB453323E7149E00C07FE3 /* GustieMenuView.swift in Sources */,
+				1EFB452F23E7107900C07FE3 /* MenuViewModel.swift in Sources */,
+				1E5A8C5A23EA53C8009E0AD1 /* Analytics.swift in Sources */,
+				1EFB452B23E6229900C07FE3 /* Menu.swift in Sources */,
+				1EFB453123E7123600C07FE3 /* MenuView.swift in Sources */,
+				1EFB452D23E68B1B00C07FE3 /* SceneDelegate.swift in Sources */,
 				1E1EA5F51D837F9200D1B52F /* Station.swift in Sources */,
 				1E1EA5F01D837F9200D1B52F /* AppDelegate.swift in Sources */,
 				1E11027921FD13C4003C4298 /* Environment.swift in Sources */,
@@ -319,6 +304,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -362,7 +348,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -375,6 +361,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -412,7 +399,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -428,13 +415,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = WXBH4AY56B;
+				ENABLE_PREVIEWS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/GustieMenu/Resources/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.TuckerSaude.GustieMenu;
+				MARKETING_VERSION = 3.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.TuckerSaude.GustieMenu.debug;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"SWIFT_ACTIVE_COMPILATION_CONDITIONS[arch=*]" = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -445,12 +436,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = WXBH4AY56B;
+				ENABLE_PREVIEWS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/GustieMenu/Resources/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.TuckerSaude.GustieMenu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

@@ -1,10 +1,13 @@
-# output directory
-.build
-lib
-
-# package directories
-node_modules
-jspm_packages
-
-# Serverless directories
-.serverless
+Thumbs.db
+.DS_Store
+.gradle
+build/
+target/
+out/
+.idea
+*.iml
+*.ipr
+*.iws
+.project
+.settings
+.classpath

@@ -1,0 +1,5 @@
+profile: service
+defaultPackage: com.tuckersaude.gustiemenu
+---
+testFramework: kotlintest
+sourceLanguage: kotlin

@@ -1,5 +1,5 @@
 //
-//  config.xcconfig
+//  debug.xcconfig
 //  GustieMenu
 //
 //  Created by Tucker Saude on 1/26/19.
@@ -12,5 +12,6 @@
 #include "Pods/Target Support Files/Pods-GustieMenu/Pods-GustieMenu.debug.xcconfig"
 
 ROOT_URL = <URL>
-FLURRY_API_KEY = <KEY>
+FIREBASE_CONFIG_NAME = <FILENAME>
 SCHEME = DEBUG
+DISPLAY_NAME = GustieMenu-Debug
