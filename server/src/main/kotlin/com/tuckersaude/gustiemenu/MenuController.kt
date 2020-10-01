@@ -30,8 +30,12 @@ class MenuController(private val gustavusClient: GustavusClient) {
 data class DateRequest(val date: LocalDate)
 
 @Singleton
-class DateRequestConverter: TypeConverter<String, DateRequest> {
-    override fun convert(obj: String?, targetType: Class<DateRequest>?, context: ConversionContext?): Optional<DateRequest> {
+class DateRequestConverter : TypeConverter<String, DateRequest> {
+    override fun convert(
+        obj: String?,
+        targetType: Class<DateRequest>?,
+        context: ConversionContext?
+    ): Optional<DateRequest> {
         return Optional.of(DateRequest(LocalDate.parse(obj, formatter)))
     }
 }
